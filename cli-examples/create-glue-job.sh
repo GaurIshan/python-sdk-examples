@@ -1,0 +1,2 @@
+aws glue create-job --name "ci_aut_bdq" --description "DQ job for AUT" --role "RB-DMG-QA-POWER-USER" --execution-property MaxConcurrentRuns=1 --command Name="glueetl",ScriptLocation="s3://your-s3-bucket/script/p
+ython/abc.py",PythonVersion="3" --max-capacity 5 --default-arguments="--TempDir="s3://your-s3-bucket/glue/jobs",--job-language="python",--job-bookmark-option="job-bookmark-enable",--extra-py-files="s3://your-s3-bucket/SCRIPTS/python/abc.py","--ocompcode"="dummy2""
